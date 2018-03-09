@@ -33,14 +33,12 @@
         <h2>Connected</h2>
 <%
     }
-else
-{
-
-
+    else
+    {
 %>
- <h2>Not Connected</h2>
- <%
+        <h2>Not Connected</h2>
+<%
     }
-  %>
+%>
 </body>
 </html>
