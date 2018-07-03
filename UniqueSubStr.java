@@ -59,7 +59,6 @@ class UniqueSubStr {
         intersection.retainAll(list2);
         union.removeAll(intersection);
 	for (String n1 : union) {
-        System.out.println(n1);
-    }
+        System.out.println(n1);}
 	}
 }
