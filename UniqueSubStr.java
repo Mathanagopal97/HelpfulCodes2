@@ -3,13 +3,18 @@
 import java.io.*;
 import java.util.*;
 
-class GFG {
+class UniqueSubStr {
 	public static void main (String[] args) {
-		String str = "aabc";
+		Scanner sc = new Scanner(System.in);
+		String str = sc.next();
+		String str2 = sc.next();
 		int n = str.length();
-		String print = "";
+		int n2 = str.length();
 		String[] substr = new String[n*n];
-		int itr=0;
+		String[] substr2 = new String[n2*n2];
+		String print = "";
+		int itr=0;		
+		int itr2=0;
 	for (int len = 1; len <= n; len++) 
 	{ 
 		for (int i = 0; i <= n - len; i++) 
@@ -27,22 +32,14 @@ class GFG {
 			print="";
 		}
 	}
-	
-	
-	
-	
-	String str2 = "ccdb";
-		int n2 = str.length();
-		String print2 = "";
-		String[] substr2 = new String[n*n];
-		int itr2=0;
+	print="";
 	for (int len = 1; len <= n2; len++) 
 	{ 
 		for (int i = 0; i <= n2 - len; i++) 
 		{
 			int j = i + len - 1;		 
 			for (int k = i; k <= j; k++) 
-				print2 = print2+str2.charAt(k);
+				print = print+str2.charAt(k);
 			
 			List<String> list2 = Arrays.asList(substr2);
 			if(list2.contains(print2)==false)
@@ -50,20 +47,17 @@ class GFG {
 			    substr2[itr2]=print2;
 			    itr2++;
 			}
-			print2="";
+			print="";
 		}
 	}
-	
+		
 	List<String> list1 = Arrays.asList(substr);
-    List<String> list2 = Arrays.asList(substr2);
+        List<String> list2 = Arrays.asList(substr2);
 	Set<String> union = new HashSet<String>(list1);
-    union.addAll(list2);
-    // Prepare an intersection
-    Set<String> intersection = new HashSet<String>(list1);
-    intersection.retainAll(list2);
-    // Subtract the intersection from the union
-    union.removeAll(intersection);
-    // Print the result
+        union.addAll(list2);
+        Set<String> intersection = new HashSet<String>(list1);
+        intersection.retainAll(list2);
+        union.removeAll(intersection);
 	for (String n1 : union) {
         System.out.println(n1);
     }
