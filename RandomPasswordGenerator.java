@@ -12,7 +12,7 @@ public class RandomPasswordGenerator
 		String numbers = "0123456789";
 		String symbols = "!@#$%^&*_=+-/.?<>)";
       String spaces = " ";
-      String values = Capital_chars + Small_chars + numbers + symbols;
+      String values = Capital_chars + Small_chars+spaces + numbers + symbols;
 		Random rndm = new Random();
 		char[] password = new char[len];
 		for (int i = 0; i < len; i++)
