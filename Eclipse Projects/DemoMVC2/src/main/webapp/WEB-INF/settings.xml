@@ -1,0 +1,13 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
+  <localRepository>/media/share/maven_repo</localRepository>
+  <servers>
+        <server>
+            <id>cool-arch-234412</id>
+            <username>mathan.sankar@anywhere.co</username>
+            <password>Akfw$53a</password>
+        </server>
+ 
+    </servers>
+   
+</settings>
